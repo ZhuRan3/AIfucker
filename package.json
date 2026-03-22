@@ -1,0 +1,74 @@
+{
+  "name": "jargon-pua",
+  "version": "0.1.0",
+  "description": "大厂黑话和PUA话术生成与转换工具 - 用反讽的方式理解大厂文化",
+  "type": "module",
+  "main": "./dist/cli/index.js",
+  "bin": {
+    "jargon-pua": "./dist/cli/index.js",
+    "jp": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "docs"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/cli/index.ts",
+    "build": "tsup",
+    "start": "node dist/cli/index.js",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "jargon",
+    "pua",
+    "chinese-tech",
+    "corporate-culture",
+    "style-conversion",
+    "ai-agent"
+  ],
+  "author": "Jargon-PUA Team",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "chalk": "^5.4.1",
+    "commander": "^12.1.0",
+    "cosmiconfig": "^9.0.0",
+    "ora": "^8.1.1",
+    "openai": "^4.73.0",
+    "cli-table3": "^0.6.5",
+    "inquirer": "^9.3.7",
+    "figlet": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/cli-table3": "^0.6.5",
+    "@types/figlet": "^1.8.3",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "@vitest/ui": "^2.1.8",
+    "coverage": "^0.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/jargon-pua.git"
+  }
+}
